@@ -1,0 +1,51 @@
+---
+title: "How to Create a Custom Domain in CoreLinks"
+description: "Learn how to set up a custom domain for your Minecraft server."
+---
+
+## 📋 Requirement
+
+Before you begin, ensure you have a domain. It can be either **paid** or **free**.
+
+
+
+## 🛠️ Step-by-Step Guide
+
+### Step 1: Configure DNS Servers
+Point your domain’s DNS servers to **Cloudflare** or any other DNS provider.
+
+
+
+### Step 2: Add an A Record for Your Domain
+1. Use your domain (e.g., `example.com`) — replace `example.com` with your actual domain name.
+2. Point the domain (`example.com`) to your **server's IPv4 address** (e.g., `83.392.19.107`).
+
+
+
+### Step 3: Add an A Record for the Subdomain
+1. Create an **A record** for the subdomain, such as `play`, and point it to the **same IPv4 address** as your domain.
+2. You can use a different name for the subdomain. For example:
+   - If you use `pog` as your subdomain, add an A record for `pog.example.com`.
+
+
+
+### Step 4: Create a SRV Record
+Configure the **SRV record** with the following details:
+
+- **Name**: `_minecraft._tcp.play`  
+  *(Replace `play` with your chosen subdomain.)*  
+- **Protocol**: `TCP`
+- **SSL**: `Auto`
+- **Port**: `25565` *(Replace with your server's port.)*  
+- **Target**: `play.example.com`
+
+
+
+### Step 5: Wait for Propagation
+DNS changes can take a few minutes to propagate. Once complete, your custom domain will be ready to use.
+
+
+
+## ❓ Need Help?
+
+If you have any questions or run into issues, feel free to reach out for assistance. We're here to help!

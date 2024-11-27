@@ -75,11 +75,9 @@
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Support Guide",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "support/custom-domain"
       ]
     }
   ],
