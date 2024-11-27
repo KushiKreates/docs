@@ -58,12 +58,6 @@
       ]
     },
     {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
       "group": "Support Guide",
       "pages": [
         "support/custom-domain"
