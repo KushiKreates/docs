@@ -42,7 +42,8 @@
     {
       "group": "Support Guide",
       "pages": [
-        "support/custom-domain"
+        "support/custom-domain",
+        "support/upload-files"
       ]
     }
   ],
