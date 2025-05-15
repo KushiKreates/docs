@@ -5,7 +5,7 @@
     "dark": "https://creepercloud.io/_next/image?url=https%3A%2F%2Fiili.io%2Fdc99Izx.png&w=48&q=75",
     "light": "https://creepercloud.io/_next/image?url=https%3A%2F%2Fiili.io%2Fdc99Izx.png&w=48&q=75"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "https://iili.io/dc99Izx.png",
   "colors": {
     "primary": "#3B82F6",
     "light": "#60A5FA",
@@ -18,7 +18,7 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:support@corelink.systems"
+      "url": "mailto:support@creepercloud.io"
     }
   ],
   "topbarCtaButton": {
