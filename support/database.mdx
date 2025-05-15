@@ -1,0 +1,30 @@
+---
+title: "Creating databases in Creepercloud"
+description: "Create a database for your servers to access."
+---
+
+# 💾 How to create a database?
+
+First head to [deploy](https://deploy.creepercloud.io/create) and create a server with the mariadb server software. 
+
+<img 
+  src="https://i.ibb.co/BVmQtRgg/Screenshot-2025-05-16-at-03-04-06.png" 
+  alt="Screenshot of Mintlify UI"
+  style={{ width: '100%', borderRadius: '8px' }}
+/>
+
+## After your server has been installed, head over to [Control](https://control.creepercloud.io) and select that server. In your terminal enter the following commands. 
+
+Keep in mind the username and password below can be changed.
+
+```CREATE USER 'username'@'%' IDENTIFIED BY 'your_password';```
+```GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' WITH GRANT OPTION;```
+```FLUSH PRIVILEGES;```
+
+Changed exmaple 
+
+```CREATE USER 'quickserver'@'%' IDENTIFIED BY 'realchunp';```
+```GRANT ALL PRIVILEGES ON *.* TO 'realchunp'@'%' WITH GRANT OPTION;```
+```FLUSH PRIVILEGES;```
+
+and viola you got yourself a databse server!
