@@ -2,23 +2,31 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "CoreLink",
   "logo": {
-    "dark": "https://creepercloud.io/_next/image?url=https%3A%2F%2Fiili.io%2Fdc99Izx.png&w=48&q=75",
-    "light": "https://creepercloud.io/_next/image?url=https%3A%2F%2Fiili.io%2Fdc99Izx.png&w=48&q=75"
+    "dark": "/logo/logo.png",
+    "light": "/logo/logo.png"
   },
-  "favicon": "https://iili.io/dc99Izx.png",
+  "favicon": "/logo/logo.png",
   "colors": {
-    "primary": "#3B82F6",
-    "light": "#60A5FA",
-    "dark": "#2563EB",
+    "primary": "#000000",
+    "light": "#8A8F98",
+    "dark": "#111111",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#0070F3",
+      "to": "#0761D1"
+    },
+    "background": {
+      "dark": "#000000",
+      "light": "#FFFFFF"
     }
   },
   "topbarLinks": [
     {
-      "name": "Support",
+      "name": "Mail",
       "url": "mailto:support@creepercloud.io"
+    },
+    {
+      "name": "Discord",
+      "url": "https://discord.gg/creepercloud"
     }
   ],
   "topbarCtaButton": {
@@ -40,14 +48,22 @@
       ]
     },
     {
-      "group": "Support Guide",
+      "group": "Support Guides",
       "pages": [
         "support/custom-domain",
-        "support/upload-files"
+        "support/upload-files",
+        "support/database"
       ]
     }
   ],
   "footerSocials": {
-    "discord": "https://discord.gg/creepercloud-the-1-free-24-7-minecraft-hosting-877966908442411088"
+    "discord": "https://discord.gg/creepercloud"
+  },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true
+  },
+  "search": {
+    "prompt": "Search Creepercloud docs..."
   }
 }

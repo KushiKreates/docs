@@ -1,39 +1,107 @@
----
-title: "Creating databases in Creepercloud"
-description: "Create a database for your servers to access."
-mode: "wide"
----
+---  
+title: "How to Setup MariaDB Database"
+description: "This tutorial will demonstrate how to set up a MariaDB database on CreeperCloud."
+icon: "database"
+---  
 
-# 💾 How to create a database?
+<Note>
+  Setting up a database is essential for many Minecraft plugins and applications. This guide makes the process simple!
+</Note>
 
-<Warning>
-  First head to [deploy](https://deploy.creepercloud.io/create) and create a server with the mariadb server software.
-</Warning>
+## Setup Process
 
-<img
-  src="https://i.ibb.co/BVmQtRgg/Screenshot-2025-05-16-at-03-04-06.png"
-  alt="Screenshot of Mintlify UI"
-  style={{ width:"100%",borderRadius:"8px" }}
-/>
+<Steps>
+  <Step title="Create a server with MariaDB egg">
+    Visit [Create server](https://deploy.creepercloud.io/create) and select the MariaDB egg when creating your server.
+    
+    <Frame>
+      ![Database creation screen](/images/database-create.png)
+    </Frame>
+  </Step>
+  
+  <Step title="Start the server">
+    Make sure your server is running before proceeding to the next steps.
+    
+    <Frame>
+      ![Database server start screen](/images/database-server-start.png)
+    </Frame>
+  </Step>
+  
+  <Step title="Create your database">
+    Run the following command in your server console:
+    
+    ```sql
+    CREATE DATABASE dbname;
+    ```
+    
+    <Tip>
+      Replace `dbname` with a name relevant to your project (e.g., `minecraft_economy`).
+    </Tip>
+    
+    <Frame>
+      ![Database creation console screen](/images/db-create-console.png)
+    </Frame>
+  </Step>
+  
+  <Step title="Create a database user">
+    Create a user with the following command:
+    
+    ```sql
+    CREATE USER 'dbusername'@'172.18.0.1' IDENTIFIED BY 'password';
+    ```
+    
+    <Warning>
+      Always use a strong, unique password! Weak passwords can compromise your server security.
+    </Warning>
+    
+    <Frame>
+      ![Database user creation console screen](/images/db-create-user-console.png)
+    </Frame>
+  </Step>
+  
+  <Step title="Link the user to the database">
+    Grant the user privileges with:
+    
+    ```sql
+    GRANT ALL ON dbname.* to 'dbusername'@'172.18.0.1' IDENTIFIED BY 'password' WITH GRANT OPTION;
+    ```
+    
+    <Frame>
+      ![Database grant User permission console screen](/images/db-grant-user-console.png)
+    </Frame>
+  </Step>
+</Steps>
 
-## After your server has been installed, head over to [Control](https://control.creepercloud.io) and select that server. In your terminal enter the following commands.
+## Important Notes
 
-Keep in mind the username and password below can be changed.
+<CardGroup cols={2}>
+  <Card title="Security" icon="shield-halved" color="#ff0000">
+    Use a secure password that includes uppercase, lowercase, numbers, and special characters.
+  </Card>
+  <Card title="Naming" icon="tag" color="#0000ff">
+    Choose meaningful names for your database and users to keep track of their purpose.
+  </Card>
+  <Card title="IP Configuration" icon="network-wired" color="#00ff00">
+    The default IP (172.18.0.1) is for local connections. Use your node IP if different!
+  </Card>
+  <Card title="Backups" icon="rotate" color="#ffff00">
+    Regularly backup your database to prevent data loss.
+  </Card>
+</CardGroup>
 
-<CodeGroup>
+## Accessing Your Database
 
-```sql terminal
-CREATE USER 'username'@'%' IDENTIFIED BY 'your_password';
-GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
+Use these credentials when configuring your applications:
+
+```yaml
+database:
+  host: 172.18.0.1  # Enter your node IP if different
+  name: dbname      # Your database name
+  user: dbusername  # Your database username
+  password: password  # Your secure password
+  port: 3306        # Default MariaDB port
 ```
 
-</CodeGroup>
-
-<Card title="A worked example for creating a user in your database" icon="sparkles">
-  ```sql
-  CREATE USER 'quickserver'@'%' IDENTIFIED BY 'realchunp';
-  GRANT ALL PRIVILEGES ON *.* TO 'realchunp'@'%' WITH GRANT OPTION;
-  FLUSH PRIVILEGES;
-  ```
-</Card>
+<Note>
+  Need help? Our support team is ready to assist you with any database configuration issues!
+</Note>

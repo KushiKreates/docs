@@ -1,46 +1,72 @@
 ---
 title: "How to upload files using our panel"
 description: "Leverage our Panel to upload your files in a jiffy"
+icon: "upload"
 ---
 
-
-
-<Card title="For folders and files above 100MB!" icon="flag">
-  If your folder or file is over 100MB, an SFTP connection is needed. Please read our [SFTP guide](/sftp-guide) to learn more.
-</Card>
+<Warning>
+  If your folder or file is over 100MB, an SFTP connection is needed. Please read our guide to learn more.
+</Warning>
 
 ## File Upload Guide
 
-Follow these steps to upload files to your server efficiently.
+Follow these simple steps to upload files to your server efficiently.
 
-### Step 1: Access the Control Panel
+<Steps>
+  <Step title="Access the Control Panel">
+    Log in to the [Control Panel](https://control.creepercloud.io) using your credentials.
+    
+    <Frame>
+      ![Control Panel Login](/images/control-panel-login.png)
+    </Frame>
+  </Step>
+  
+  <Step title="Navigate to File Manager">
+    Once logged in, navigate to the **File Manager** section from the dashboard.
+    
+    <Frame>
+      ![File Manager Navigation](/images/file-manager-nav.png)
+    </Frame>
+  </Step>
+  
+  <Step title="Upload Files">
+    <Tabs>
+      <Tab title="Single File">
+        1. Click on the **Upload** button in the top-right corner
+        2. Select the file you want to upload from your local machine
+        3. Click **Confirm** to start the upload
+        
+        <Frame>
+          ![Single File Upload](/images/single-upload.png)
+        </Frame>
+      </Tab>
+      
+      <Tab title="Multiple Files">
+        1. Click on the **Upload** button in the top-right corner
+        2. Hold **Ctrl** (or **⌘** on Mac) and select multiple files
+        3. Click **Confirm** to start the upload
+        4. Track individual progress in the upload queue
+        
+        <Frame>
+          ![Multiple Files Upload](/images/multi-upload.png)
+        </Frame>
+      </Tab>
+      
+      <Tab title="Drag & Drop">
+        Simply drag files from your computer and drop them into the file manager area.
+        
+        <Frame>
+          ![Drag and Drop](/images/drag-drop.png)
+        </Frame>
+      </Tab>
+    </Tabs>
+  </Step>
+  
+  <Step title="Complete">
+    Your files have now been uploaded to your server.
+  </Step>
+</Steps>
 
-Log in to the [Control Panel](https://control.creepercloud.io) using your credentials.
-
-### Step 2: Navigate to the File Manager
-
-Once logged in, navigate to the **File Manager** section from the dashboard.
-
-### Step 3: Upload Files
-
-1. Click on the **Upload** button in the top-right corner.
-2. Select the files you want to upload from your local machine.
-3. Confirm the upload and wait for the process to complete.
-   - A progress bar will indicate the upload status
-   - For multiple files, you can track individual progress
-
-### Step 4: Complete
-
-Your files have now been uploaded to your server. You can now:
-- Manage file permissions
-- Edit text files directly in the browser
-- Create new directories to organize your content
-
-
-## Troubleshooting ⚒
-
-If you encounter any issues during the upload process:
-- Check your internet connection
-- Verify file size limits (100MB max for web uploads)
-- Try refreshing the page if the uploader becomes unresponsive
-- Contact support if problems persist. 
+<Note>
+  Still having trouble? Contact our [support team](mailto:support@creepercloud.io) and we'll help you get your files uploaded.
+</Note>

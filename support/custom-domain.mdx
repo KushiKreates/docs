@@ -1,52 +1,85 @@
----
-title: "How to Create a Custom Domain in CoreLinks"
-description: "Learn how to set up a custom domain for your Minecraft server."
----
+---  
+title: "How to Set Up a Custom Domain"  
+description: "Find out how to set up a custom domain for your Minecraft server."
+icon: "globe"
+---  
 
-## 📋 Requirement
+<Note>
+  A custom domain makes your server more professional and easier to remember. Follow this guide to set up yours!
+</Note>
 
-Before you begin, ensure you have a domain. It can be either **paid** or **free**.
+## Prerequisites
 
+<Check>
+  You need to own a domain name (can be paid or free)
+</Check>
 
+<Check>
+  Access to your domain's DNS settings
+</Check>
 
-## 🛠️ Step-by-Step Guide
+<Check>
+  Your server's IPv4 address
+</Check>
 
-### Step 1: Configure DNS Servers
-Point your domain’s DNS servers to **Cloudflare** or any other DNS provider.
+## Step-by-Step Guide  
 
+<Steps>
+  <Step title="Set DNS Servers">
+    1. Point your domain's DNS servers to [Cloudflare](https://cloudflare.com) or any other DNS provider
+    2. Create an account if you don't have one
+    3. Add your domain to your DNS provider
+    4. Update your domain's nameservers at your registrar
+    
+    <Warning>
+      DNS changes can take 24-48 hours to fully propagate, though they often complete much sooner.
+    </Warning>
+  </Step>
+  
+  <Step title="Create an A Record for Your Root Domain">
+    1. Go to the DNS section for your domain
+    2. Create a new "A" record 
+    3. For "Name", enter `@` (represents your root domain)
+    4. For "IPv4 address", enter your server's IP address (e.g., 83.392.19.107)
+    5. Save the record
+    
+    <Tip>
+      This will point example.com directly to your server IP.
+    </Tip>
+  </Step>
+  
+  <Step title="Set Up a Subdomain">
+    1. Create another A record with your chosen subdomain (e.g., `play`)
+    2. Point it to the same IPv4 address as your root domain
+    
+    <Tip>
+      You can use any subdomain name you prefer such as "mc", "play", "minecraft", or "server".
+    </Tip>
+  </Step>
+  
+  <Step title="Create a SRV Record">
+    Create an SRV record with these values:
+    - **Name**: `_minecraft._tcp.play` (replace `play` with your subdomain)
+    - **Protocol**: `TCP`
+    - **TTL**: `Auto`
+    - **Port**: `25565` (replace with your server port)
+    - **Target**: `play.example.com` (replace with your subdomain and domain)
+    
+    <Note>
+      The SRV record allows players to connect to your server using just your domain name without specifying a port.
+    </Note>
+  </Step>
+  
+  <Step title="Wait for Propagation">
+    Wait a few minutes for your DNS changes to take effect.
+    
+    <Success>
+      Once propagation is complete, players can connect to your server using your custom domain!
+    </Success>
+  </Step>
+</Steps>
 
-
-### Step 2: Add an A Record for Your Domain
-1. Use your domain (e.g., `example.com`) — replace `example.com` with your actual domain name.
-2. Point the domain (`example.com`) to your **server's IPv4 address** (e.g., `83.392.19.107`).
-
-
-
-### Step 3: Add an A Record for the Subdomain
-1. Create an **A record** for the subdomain, such as `play`, and point it to the **same IPv4 address** as your domain.
-2. You can use a different name for the subdomain. For example:
-   - If you use `pog` as your subdomain, add an A record for `pog.example.com`.
-
-
-
-### Step 4: Create a SRV Record
-Configure the **SRV record** with the following details:
-
-- **Name**: `_minecraft._tcp.play`  
-  *(Replace `play` with your chosen subdomain.)*  
-- **Protocol**: `TCP`
-- **SSL**: `Auto`
-- **Port**: `25565` *(Replace with your server's port.)*  
-- **Target**: `play.example.com`
-
-
-
-### Step 5: Wait for Propagation
-DNS changes can take a few minutes to propagate. Once complete, your custom domain will be ready to use.
-
-
-
-## ❓ Need Help?
-
-If you have any questions or run into issues, feel free to reach out for assistance. We're here to help!
+<Note>
+  Feel free to ask questions about this process! Our support team is here to help.
+</Note>
 
