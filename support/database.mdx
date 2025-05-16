@@ -1,11 +1,14 @@
 ---
 title: "Creating databases in Creepercloud"
 description: "Create a database for your servers to access."
+mode: "wide"
 ---
 
 # 💾 How to create a database?
 
-First head to [deploy](https://deploy.creepercloud.io/create) and create a server with the mariadb server software.
+<Warning>
+  First head to [deploy](https://deploy.creepercloud.io/create) and create a server with the mariadb server software.
+</Warning>
 
 <img
   src="https://i.ibb.co/BVmQtRgg/Screenshot-2025-05-16-at-03-04-06.png"
@@ -17,16 +20,20 @@ First head to [deploy](https://deploy.creepercloud.io/create) and create a serve
 
 Keep in mind the username and password below can be changed.
 
-`CREATE USER 'username'@'%' IDENTIFIED BY 'your_password';`
-`GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' WITH GRANT OPTION;`
-`FLUSH PRIVILEGES;`
+<CodeGroup>
 
-Changed exmaple
+```sql terminal
+CREATE USER 'username'@'%' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
 
-`CREATE USER 'quickserver'@'%' IDENTIFIED BY 'realchunp';`
-`GRANT ALL PRIVILEGES ON *.* TO 'realchunp'@'%' WITH GRANT OPTION;`
-`FLUSH PRIVILEGES;`
+</CodeGroup>
 
-<Tip>
-  Your database is now available\! 
-</Tip>
+<Card title="A worked example for creating a user in your database" icon="sparkles">
+  ```sql
+  CREATE USER 'quickserver'@'%' IDENTIFIED BY 'realchunp';
+  GRANT ALL PRIVILEGES ON *.* TO 'realchunp'@'%' WITH GRANT OPTION;
+  FLUSH PRIVILEGES;
+  ```
+</Card>
