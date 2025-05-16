@@ -1,0 +1,7 @@
+/**
+
+Running this command will refersh the whole docs
+
+**/
+
+find . -type f -not -path '*/\.git/*' -exec sh -c 'echo >> "$1" && sed -i "" -e "$ d" "$1"' _ {} \;
