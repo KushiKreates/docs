@@ -54,6 +54,14 @@
         "support/upload-files",
         "support/database"
       ]
+    },
+    {
+      "group": "Fivem",
+      "pages": [
+        "support/fivem/index",
+        "support/fivem/add-database"
+       
+      ]
     }
   ],
   "footerSocials": {
