@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "CoreLink",
+  "name": "Creepercloud",
   "logo": {
     "dark": "/logo/logo.png",
     "light": "/logo/logo.png"
@@ -20,6 +20,10 @@
     }
   },
   "topbarLinks": [
+    {
+      "name": "nadhi.dev",
+      "url": "https://nadhi.dev/"
+    },
     {
       "name": "Mail",
       "url": "mailto:support@creepercloud.io"
@@ -65,7 +69,8 @@
     }
   ],
   "footerSocials": {
-    "discord": "https://discord.gg/creepercloud"
+    "discord": "https://discord.gg/creepercloud",
+    
   },
   "feedback": {
     "thumbsRating": true,
