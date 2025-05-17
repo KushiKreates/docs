@@ -60,7 +60,7 @@
       ]
     },
     {
-      "group": "Fivem",
+      "group": "Fivem-servers",
       "pages": [
         "support/fivem/index",
         "support/fivem/add-database"
