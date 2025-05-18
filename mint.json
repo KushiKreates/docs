@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "Mintlify",
+  "name": "Creepercloud",
   "colors": {
     "primary": "#0D9373",
     "light": "#55D799",
@@ -12,85 +12,33 @@
     "library": "lucide"
   },
   "navigation": {
-   
-      "groups": [
-        {
-          "group": "Get Started",
-          "pages": [
-            "introduction",
-            "quickstart"
-          ]
-        },
-        {
-          "group": "Support Guides",
-          "pages": [
-            "support/custom-domain",
-            "support/upload-files",
-            "support/database"
-          ]
-        },
-        {
-          "group": "Fivem-servers",
-          "pages": [
-            "support/fivem/index",
-            "support/fivem/add-database"
-          ]
-        }
-      ]   
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "introduction",
+          "quickstart"
+        ]
       },
-
-          
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg",
-   
-  },
-  "api": {
-    "mdx": {
-      "auth": {
-        "method": "bearer"
-      }
-    }
-  },
-  "navbar": {
-    "links": [
       {
-        "label": "nadhi.dev",
-        "href": "https://nadhi.dev"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://deploy.creepercloud.io"
-    }
-  },
-  "footer": {
-    "socials": {
-      "discord": "https://discord.gg/creepercloud"
-      
-    },
-    "links": [
-
-      
+        "group": "Support Guides",
+        "pages": [
+          "support/custom-domain",
+          "support/upload-files",
+          "support/database"
+        ]
+      },
       {
-        "header": "Legal",
-        "items": [
-          {
-            "label": "Privacy Policy",
-            "href": "https://s3.xshadow.xyz/shadowsdash/legal/privacy.html"
-          },
-          {
-            "label": "Terms of Service",
-            "href": "https://creepercloud.io/terms"
-          }
+        "group": "Fivem-servers",
+        "pages": [
+          "support/fivem/index",
+          "support/fivem/add-database"
         ]
       }
     ]
   },
-  "contextual": {
-    "options": [
-      "copy"
-    ]
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
   }
 }
