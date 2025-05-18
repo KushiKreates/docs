@@ -1,84 +1,96 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
+  "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "Creepercloud",
-  "logo": {
-    "dark": "/logo/logo.png",
-    "light": "/logo/logo.png"
-  },
-  "favicon": "/logo/logo.png",
+  "name": "Mintlify",
   "colors": {
-    "primary": "#000000",
-    "light": "#8A8F98",
-    "dark": "#111111",
-    "anchors": {
-      "from": "#0070F3",
-      "to": "#0761D1"
-    },
-    "background": {
-      "dark": "#000000",
-      "light": "#FFFFFF"
-    }
+    "primary": "#0D9373",
+    "light": "#55D799",
+    "dark": "#0D9373"
   },
-  "topbarLinks": [
-    {
-      "name": "nadhi.dev",
-      "url": "https://nadhi.dev/"
-    },
-    {
-      "name": "Mail",
-      "url": "mailto:support@creepercloud.io"
-    },
-    {
-      "name": "Discord",
-      "url": "https://discord.gg/creepercloud"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://deploy.creepercloud.io"
+  "favicon": "/favicon.svg",
+  "icons": {
+    "library": "lucide"
   },
-  "tabs": [
-    {
-      "name": "Documentation",
-      "url": "docs"
-    }
-  ],
-  "navigation": [
-    {
-      "group": "Get Started",
-      "pages": [
-        "introduction",
-        "quickstart"
-      ]
-    },
-    {
-      "group": "Support Guides",
-      "pages": [
-        "support/custom-domain",
-        "support/upload-files",
-        "support/database"
-      ]
-    },
-    {
-      "group": "Fivem-servers",
-      "pages": [
-        "support/fivem/index",
-        "support/fivem/add-database"
-       
-      ]
-    }
-  ],
-  "footerSocials": {
-    "discord": "https://discord.gg/creepercloud"
-    
-  },
-  "feedback": {
-    "thumbsRating": true,
-    "suggestEdit": true
-  },
-  "search": {
-    "prompt": "Search Creepercloud docs..."
-  }
+  "navigation": {
+   
+      "groups": [
+        {
+          "group": "Get Started",
+          "pages": [
+            "introduction",
+            "quickstart"
+          ]
+        },
+        {
+          "group": "Support Guides",
+          "pages": [
+            "support/custom-domain",
+            "support/upload-files",
+            "support/database"
+          ]
+        },
+        {
+          "group": "Fivem-servers",
+          "pages": [
+            "support/fivem/index",
+            "support/fivem/add-database"
+          ]
+        }
+      ]   
+      },
 
+          
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+   
+  },
+  "api": {
+    "mdx": {
+      "auth": {
+        "method": "bearer"
+      }
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "nadhi.dev",
+        "href": "https://nadhi.dev"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://deploy.creepercloud.io"
+    }
+  },
+  "footer": {
+    "socials": {
+      "discord": "https://discord.gg/creepercloud"
+      
+    },
+    "links": [
+
+      
+      {
+        "header": "Legal",
+        "items": [
+          {
+            "label": "Privacy Policy",
+            "href": "https://s3.xshadow.xyz/shadowsdash/legal/privacy.html"
+          },
+          {
+            "label": "Terms of Service",
+            "href": "https://creepercloud.io/terms"
+          }
+        ]
+      }
+    ]
+  },
+  "contextual": {
+    "options": [
+      "copy"
+    ]
+  }
 }
