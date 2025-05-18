@@ -1,5 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
+  "theme": "prism",
   "name": "Creepercloud",
   "logo": {
     "dark": "/logo/logo.png",
